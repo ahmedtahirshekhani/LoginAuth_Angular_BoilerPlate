@@ -1,0 +1,22 @@
+<p>hello works!</p>
+<input type="text" [value]="text" (input)="updateInput($event)" class="type">
+{{text}}
+<button (click) = "doSome()" [disabled]="disableButton">Check!</button>
+<button (click) = "doSome()">Hey Click Me!</button>
+<input type="text" [(ngModel)]="text" class="type">
+{{text}}
+
+
+<table>
+    <tr>
+        <td>S. No</td>
+        <td>Name</td>
+        <td>Is it online?</td>
+    </tr>
+<tr *ngFor="let record of records; let idx = index;">
+    <td>{{idx}}</td>
+    <td>{{record.name}}</td>
+    <td>{{record.online}}</td>
+
+</tr>
+</table>
